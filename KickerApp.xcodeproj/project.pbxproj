@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7651095321F9AF4D00EADDE3 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651095221F9AF4D00EADDE3 /* LaunchScreenViewController.swift */; };
-		7651128D21EFAA1400E30564 /* FoosballService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651128C21EFAA1400E30564 /* FoosballService.swift */; };
 		7651128F21EFAA9000E30564 /* FoosballTableCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651128E21EFAA9000E30564 /* FoosballTableCodable.swift */; };
 		7651129121EFAE0A00E30564 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651129021EFAE0A00E30564 /* StatisticViewController.swift */; };
+		76682895221736E100368F8E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682890221736E100368F8E /* UserService.swift */; };
+		76682896221736E100368F8E /* FoosballService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682891221736E100368F8E /* FoosballService.swift */; };
+		76682897221736E100368F8E /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682893221736E100368F8E /* ViewControllerCoordinator.swift */; };
+		76682898221736E100368F8E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682894221736E100368F8E /* MainCoordinator.swift */; };
 		76C7687B21F1374F004C29B6 /* CustomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7687921F1374F004C29B6 /* CustomListTableViewCell.swift */; };
 		76C7687C21F1374F004C29B6 /* CustomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7687A21F1374F004C29B6 /* CustomListTableViewCell.xib */; };
 		76CB3BF021FE0C3900832B9B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CB3BEF21FE0C3900832B9B /* GradientView.swift */; };
@@ -21,15 +24,12 @@
 		76CF324621EF6A1A00FE11F3 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76CF324221EF6A1A00FE11F3 /* Raleway-Medium.ttf */; };
 		76CF324721EF6A1A00FE11F3 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76CF324321EF6A1A00FE11F3 /* Raleway-Bold.ttf */; };
 		76CF324921EF6EC800FE11F3 /* FoosballCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CF324821EF6EC800FE11F3 /* FoosballCollectionViewCell.swift */; };
-		76E74B582215D6A000682627 /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E74B572215D6A000682627 /* ViewControllerCoordinator.swift */; };
-		76E74B5A2215DA1200682627 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E74B592215DA1200682627 /* MainCoordinator.swift */; };
 		76F2D1F721EE42A40049333F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D1F621EE42A40049333F /* AppDelegate.swift */; };
 		76F2D1F921EE42A40049333F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D1F821EE42A40049333F /* ListViewController.swift */; };
 		76F2D1FC21EE42A40049333F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D1FA21EE42A40049333F /* Main.storyboard */; };
 		76F2D1FF21EE42A40049333F /* KickerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D1FD21EE42A40049333F /* KickerApp.xcdatamodeld */; };
 		76F2D20121EE42A50049333F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D20021EE42A50049333F /* Assets.xcassets */; };
 		76F2D20421EE42A50049333F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D20221EE42A50049333F /* LaunchScreen.storyboard */; };
-		76F2D20C21EE42C50049333F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D20B21EE42C50049333F /* UserService.swift */; };
 		76F2D20E21EE42DE0049333F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D20D21EE42DE0049333F /* Users.swift */; };
 		76F2D21021EE44DF0049333F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F2D20F21EE44DF0049333F /* Alamofire.framework */; };
 		76F2D21121EE44DF0049333F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76F2D20F21EE44DF0049333F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -58,9 +58,12 @@
 /* Begin PBXFileReference section */
 		6894B593C1648A2861418C46 /* Pods_KickerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7651095221F9AF4D00EADDE3 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
-		7651128C21EFAA1400E30564 /* FoosballService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoosballService.swift; sourceTree = "<group>"; };
 		7651128E21EFAA9000E30564 /* FoosballTableCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoosballTableCodable.swift; sourceTree = "<group>"; };
 		7651129021EFAE0A00E30564 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		76682890221736E100368F8E /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		76682891221736E100368F8E /* FoosballService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoosballService.swift; sourceTree = "<group>"; };
+		76682893221736E100368F8E /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		76682894221736E100368F8E /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		76C7687921F1374F004C29B6 /* CustomListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListTableViewCell.swift; sourceTree = "<group>"; };
 		76C7687A21F1374F004C29B6 /* CustomListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomListTableViewCell.xib; sourceTree = "<group>"; };
 		76CB3BEF21FE0C3900832B9B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -71,8 +74,6 @@
 		76CF324221EF6A1A00FE11F3 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		76CF324321EF6A1A00FE11F3 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		76CF324821EF6EC800FE11F3 /* FoosballCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoosballCollectionViewCell.swift; sourceTree = "<group>"; };
-		76E74B572215D6A000682627 /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
-		76E74B592215DA1200682627 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		76F2D1F321EE42A40049333F /* KickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F2D1F621EE42A40049333F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F2D1F821EE42A40049333F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		76F2D20021EE42A50049333F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F2D20321EE42A50049333F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76F2D20521EE42A50049333F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76F2D20B21EE42C50049333F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		76F2D20D21EE42DE0049333F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		76F2D20F21EE44DF0049333F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		76F2D21321EF3B780049333F /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
@@ -115,6 +115,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7668288F221736E100368F8E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				76682890221736E100368F8E /* UserService.swift */,
+				76682891221736E100368F8E /* FoosballService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		76682892221736E100368F8E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				76682893221736E100368F8E /* ViewControllerCoordinator.swift */,
+				76682894221736E100368F8E /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		76C7687621F0935E004C29B6 /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +164,8 @@
 		76F2D1F521EE42A40049333F /* KickerApp */ = {
 			isa = PBXGroup;
 			children = (
+				76682892221736E100368F8E /* Coordinator */,
+				7668288F221736E100368F8E /* Service */,
 				76F5290021F1E59700A1724E /* VCs */,
 				76F528FF21F1E59200A1724E /* Cells */,
 				76C7687621F0935E004C29B6 /* data */,
@@ -157,10 +177,6 @@
 				76F2D20221EE42A50049333F /* LaunchScreen.storyboard */,
 				76F2D20521EE42A50049333F /* Info.plist */,
 				76F2D1FD21EE42A40049333F /* KickerApp.xcdatamodeld */,
-				7651128C21EFAA1400E30564 /* FoosballService.swift */,
-				76F2D20B21EE42C50049333F /* UserService.swift */,
-				76E74B572215D6A000682627 /* ViewControllerCoordinator.swift */,
-				76E74B592215DA1200682627 /* MainCoordinator.swift */,
 			);
 			path = KickerApp;
 			sourceTree = "<group>";
@@ -320,18 +336,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				76CF324921EF6EC800FE11F3 /* FoosballCollectionViewCell.swift in Sources */,
-				7651128D21EFAA1400E30564 /* FoosballService.swift in Sources */,
 				76F2D1F921EE42A40049333F /* ListViewController.swift in Sources */,
-				76F2D20C21EE42C50049333F /* UserService.swift in Sources */,
-				76E74B582215D6A000682627 /* ViewControllerCoordinator.swift in Sources */,
+				76682898221736E100368F8E /* MainCoordinator.swift in Sources */,
 				76F2D20E21EE42DE0049333F /* Users.swift in Sources */,
 				76F2D21921EF3B780049333F /* Design.swift in Sources */,
-				76E74B5A2215DA1200682627 /* MainCoordinator.swift in Sources */,
+				76682896221736E100368F8E /* FoosballService.swift in Sources */,
 				7651095321F9AF4D00EADDE3 /* LaunchScreenViewController.swift in Sources */,
+				76682897221736E100368F8E /* ViewControllerCoordinator.swift in Sources */,
 				7651128F21EFAA9000E30564 /* FoosballTableCodable.swift in Sources */,
 				76CB3BF021FE0C3900832B9B /* GradientView.swift in Sources */,
 				76F2D22321EF48EF0049333F /* FoosballViewController.swift in Sources */,
 				76CDA3C421FB7A6400594BF0 /* CustomSideMenuViewController.swift in Sources */,
+				76682895221736E100368F8E /* UserService.swift in Sources */,
 				76C7687B21F1374F004C29B6 /* CustomListTableViewCell.swift in Sources */,
 				76F2D1F721EE42A40049333F /* AppDelegate.swift in Sources */,
 				76CDA3CA21FBB0E100594BF0 /* ContainViewController.swift in Sources */,

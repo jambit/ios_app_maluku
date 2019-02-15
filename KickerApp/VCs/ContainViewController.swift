@@ -20,10 +20,10 @@ class ContainViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItems = [barButtonItem(image: UIImage(named: "iconmenu"), target: self, action: #selector (toggleSideMenu))]
+        children.compactMap({ $0 as? CustomSideMenuViewController }).first?.coordinator = coordinator
     }
 
     @objc func toggleSideMenu() {
-        coordinator?.instantiateSideMenu()
         if sideBarisOpen {
             sideBarisOpen = false
             sideMenuLeadingConstraint.constant = -sideMenuView.frame.width
