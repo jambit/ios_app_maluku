@@ -17,8 +17,9 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet var currentTimeLabel: UILabel!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
 
+
+    //MARK: Properties
     weak var coordinator: MainCoordinator?
-    
     private var foosballTables = [FoosballTableCodable]()
     private var timer: Timer?
     private var indexOfCellBeforeDragging = 0
@@ -31,33 +32,12 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     }()
 
-//    private func setUpSwipeRecognizer(direction: UISwipeGestureRecognizer.Direction) {
-//        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeBetweenCell(_:)))
-//        swipeGesture.direction = direction
-//        swipeGesture.delegate = self
-//        foosballTableCollection.addGestureRecognizer(swipeGesture)
-//        foosballTableCollection.isUserInteractionEnabled = true
-//    }
-//
-//    @objc func handleSwipeBetweenCell(_ swipeGesture: UISwipeGestureRecognizer) {
-////        switch swipeGesture.direction {
-////        case .left:
-////            UIView.transition(from: gradientView1, to: gradientView2, duration: 0.5, options: [.transitionCrossDissolve, .showHideTransitionViews], completion: nil)
-////        case .right:
-////            UIView.transition(from: gradientView2, to: gradientView1, duration: 0.5, options: [.transitionCrossDissolve, .showHideTransitionViews], completion: nil)
-////        default: break
-////        }
-//    }
-//
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-//        return true
-//    }
-
     class Table {
         var occupiedPlaces: [Int] = []
         init() {}
     }
 
+    //Filter occupied tables
     private func occupiedTables() -> [Int] {
         var tables: [Int: Table] = [:]
         for kickerTable in foosballTables {
@@ -73,9 +53,10 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
         return tables.filter({ $0.value.occupiedPlaces.count > 1 }).map({ $0.key })
     }
 
+    //Reload view with new data
     @objc private func updateData() {
-        FoosballService.shared.getKickerInfo(completionHandler: { [weak self] kickerTische in
-            self?.foosballTables = kickerTische })
+        FoosballService.shared.getKickerInfo(completionHandler: { [weak self] foosballTables in
+            self?.foosballTables = foosballTables })
         foosballTableCollection.reloadData()
         currentTimeLabel.text = "Aktualisiert um: \(currentTime())"
     }
@@ -88,25 +69,33 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = foosballTableCollection.dequeueReusableCell(withReuseIdentifier: "kickerCollectionCell", for: indexPath) as! FoosballCollectionViewCell
         FoosballService.shared.getKickerInfo(completionHandler: { [weak self] kickerTische in
             self?.foosballTables = kickerTische })
-        cell.layer.cornerRadius = 30
-        cell.layer.masksToBounds = true
         let tableName = tables[indexPath.row].name
-        setUpCellLabel(of: cell, for: tableName)
-        createShadow(for: cell)
+        setupUI(of: cell, for: tableName)
         cell.backgroundColor = tables[indexPath.row].backgroundColor
         cell.notOccupiedImage.image = tables[indexPath.row].notOccupiedImage
         cell.occupiedImage.image = tables[indexPath.row].occupiedImage
         cell.occupiedImage.isHidden = true
-        let tableCell = indexPath.row + 1
+        let tableNumber = indexPath.row + 1
+        displayOccupiedTables(for: cell, at: tableNumber)
+        return cell
+    }
+
+    private func displayOccupiedTables(for cell: FoosballCollectionViewCell, at tableCell: Int){
         for table in occupiedTables() {
             if table == tableCell {
                 cell.occupiedImage.isHidden = false
             }
         }
-        return cell
     }
 
+    private func setupUI(of cell: FoosballCollectionViewCell, for tableName: String) {
+        cell.layer.cornerRadius = 30
+        cell.layer.masksToBounds = true
+        setUpCellLabel(of: cell, for: tableName)
+        createShadow(for: cell)
+    }
 
+    //get the current cell index
     private func indexOfMajorCell() -> Int {
         let itemWidth = collectionViewFlowLayout.itemSize.width
         let proportionalOffset = collectionViewFlowLayout.collectionView!.contentOffset.x / itemWidth
@@ -116,6 +105,7 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
         return safeIndex
     }
 
+    //Change background screen colors when user swipe to a specific cell
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         targetContentOffset.pointee = scrollView.contentOffset
         let indexOfMajorCell = self.indexOfMajorCell()
@@ -193,12 +183,7 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
         gradientView1.frame = view.bounds
         gradientView2.frame = view.bounds
         gradientView3.frame = view.bounds
-//        setUpSwipeRecognizer(direction: .left)
-//        setUpSwipeRecognizer(direction: .right)
         view.backgroundColor = .clear
-//        view.setGradientBackground(color1: UIColor(red:1.00, green:0.69, blue:0.74, alpha:1.0), color2: UIColor(red:1.00, green:0.76, blue:0.63, alpha:1.0))
-//        view.setGradientBackground(color1: UIColor(red:1.00, green:0.76, blue:0.63, alpha:1.0), color2: UIColor(red:0.98, green:0.67, blue:0.49, alpha:1.0))
-//        view.setGradientBackground(color1: UIColor(red:0.98, green:0.67, blue:0.49, alpha:1.0), color2: UIColor(red:0.97, green:0.81, blue:0.41, alpha:1.0))
     }
 
     override func viewWillAppear(_ animated: Bool) {

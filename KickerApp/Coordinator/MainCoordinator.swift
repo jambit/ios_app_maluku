@@ -16,25 +16,37 @@ public class MainCoordinator: Coordinator {
         self.navigationController = navigationController
     }
 
-    func start() {
+    func openContainerView() {
         let vc = ContainViewController.instantiate()
         vc.coordinator = self
-    //    instantiateSideMenu()
-        navigationController.pushViewController(vc, animated: false)
+        navigationController.pushViewController(vc, animated: true)
     }
 
-    func openFoosballView() {
+    func start() {
+        let launchScreen = LaunchScreenViewController.instantiate()
+        launchScreen.coordinator = self
+        navigationController.pushViewController(launchScreen, animated: false)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+            [weak self] in
+            self?.openContainerView()
+        })
+    }
+
+    func openFoosballView(from containerNavigationController: ContainerNavigationController) {
         let vc = FoosballViewController.instantiate()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        containerNavigationController.pushViewController(vc, animated: true)
     }
-    func openListView() {
+
+    func openListView(from containerNavigationController: ContainerNavigationController) {
         let vc = ListViewController.instantiate()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        containerNavigationController.pushViewController(vc, animated: true)
     }
-    func instantiateSideMenu() {
-        let vc = CustomSideMenuViewController.instantiate()
+
+    func openStatisticView(from containerNavigationController: ContainerNavigationController) {
+        let vc = ListViewController.instantiate()
         vc.coordinator = self
-    }
+        containerNavigationController.pushViewController(vc, animated: true)
+        }
 }

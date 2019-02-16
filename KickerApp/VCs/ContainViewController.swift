@@ -15,19 +15,24 @@ class ContainViewController: UIViewController, Storyboarded {
     @IBOutlet weak var sideMenuLeadingConstraint: NSLayoutConstraint!
 
     private var sideBarisOpen = false
+    var containerNavigationController: ContainerNavigationController?
     weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(toggleSideMenu), name: NSNotification.Name("toggleSideMenu"), object: nil)
         navigationItem.leftBarButtonItems = [barButtonItem(image: UIImage(named: "iconmenu"), target: self, action: #selector (toggleSideMenu))]
-        children.compactMap({ $0 as? CustomSideMenuViewController }).first?.coordinator = coordinator
+        containerNavigationController = children.compactMap({ $0 as? ContainerNavigationController }).first
+        if let sideMenuVC = children.compactMap({ $0 as? CustomSideMenuViewController }).first {
+            sideMenuVC.coordinator = coordinator
+            sideMenuVC.containerNavigatonController = containerNavigationController
+        }
     }
 
     @objc func toggleSideMenu() {
         if sideBarisOpen {
             sideBarisOpen = false
             sideMenuLeadingConstraint.constant = -sideMenuView.frame.width
-
         } else {
             sideBarisOpen = true
             sideMenuLeadingConstraint.constant = 0

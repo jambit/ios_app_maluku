@@ -16,10 +16,5 @@ class CustomListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var deleteButton: CustomButton!
     
-
-    @IBAction func deleteUser(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name("deleteUser"), object: nil)
-    }
-    
     
 }

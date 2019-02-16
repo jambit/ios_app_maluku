@@ -24,6 +24,7 @@ class CustomSideMenuViewController: UIViewController, UITableViewDelegate, UITab
                 NotificationCenter.default.post(name: NSNotification.Name("toggleSideMenu"), object: nil)
     }
    weak var coordinator: MainCoordinator?
+    var containerNavigatonController: ContainerNavigationController?
 
     private let options : [Option] = {() -> [Option] in
         var options: [Option] = []
@@ -48,11 +49,12 @@ class CustomSideMenuViewController: UIViewController, UITableViewDelegate, UITab
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? CustomListTableViewCell else { return}
+        guard let containerNavigatonController = containerNavigatonController else {return}
         if cell.userName.text == options[1].title {
-            coordinator?.openListView()
+            coordinator?.openListView(from: containerNavigatonController)
+            NotificationCenter.default.post(name: NSNotification.Name("toggleSideMenu"), object: nil)
         } else {
-//            NotificationCenter.default.post(name: NSNotification.Name("showMainView"), object: nil)
-            coordinator?.openFoosballView()
+            coordinator?.openFoosballView(from: containerNavigatonController)
             NotificationCenter.default.post(name: NSNotification.Name("toggleSideMenu"), object: nil)
         }
     }

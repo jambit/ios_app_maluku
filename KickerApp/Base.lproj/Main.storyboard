@@ -149,11 +149,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Liste" image="list_icon" id="Mip-Ur-rSM"/>
                     <navigationItem key="navigationItem" id="R9L-RN-6Ee">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="iconmenu" id="yxO-FO-AdJ">
-                            <connections>
-                                <action selector="openSideMenu:" destination="BYZ-38-t0r" id="c1J-X4-t3l"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="iconmenu" id="yxO-FO-AdJ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="kZA-hR-TQl" id="7zV-LY-ZNg"/>
@@ -165,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="1559"/>
+            <point key="canvasLocation" x="-799" y="1706"/>
         </scene>
         <!--Foosball View Controller-->
         <scene sceneID="lw5-dS-ANW">
@@ -295,7 +291,7 @@
                                         </connections>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.51764705882352935" blue="0.36470588235294116" alpha="0.39688570205479451" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Wr8-xF-0of" secondAttribute="trailing" constant="30" id="4DZ-GW-LOP"/>
                                     <constraint firstItem="CTF-XJ-Jeb" firstAttribute="top" secondItem="Wr8-xF-0of" secondAttribute="bottom" constant="10" id="7eb-pI-Eqd"/>
@@ -326,14 +322,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B6s-NA-jt7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vZt-bu-E7x"/>
+                    <navigationItem key="navigationItem" id="Gta-IP-QWV">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="iconmenu" id="d82-pY-o57"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionViewFlowLayout" destination="q2y-Gk-pPr" id="aKO-tv-cek"/>
                         <outlet property="currentTimeLabel" destination="Wr8-xF-0of" id="zLZ-BZ-IiE"/>
                         <outlet property="foosballTableCollection" destination="CTF-XJ-Jeb" id="m8M-6Y-hy0"/>
                         <outlet property="foosballTitleLabel" destination="CQr-vt-ITZ" id="bNF-Ac-Lnm"/>
                         <outlet property="gradientView1" destination="KYG-rj-1lE" id="RRs-7U-3ic"/>
-                        <outlet property="gradientView2" destination="VSK-Pk-X0c" id="pXt-GV-6GW"/>
+                        <outlet property="gradientView2" destination="xHp-hX-DQ3" id="nSJ-rt-JXt"/>
                         <outlet property="gradientView3" destination="VSK-Pk-X0c" id="Ute-B5-OKt"/>
                     </connections>
                 </viewController>
@@ -344,27 +342,35 @@
         <!--Launch Screen View Controller-->
         <scene sceneID="J56-MM-Vi6">
             <objects>
-                <viewController id="JYT-Pr-DOK" customClass="LaunchScreenViewController" customModule="KickerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JYT-Pr-DOK" customClass="LaunchScreenViewController" customModule="KickerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xxq-7G-wH8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kicker App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fa-uO-5cW">
-                                <rect key="frame" x="28" y="403" width="159" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kicker App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fa-uO-5cW">
+                                <rect key="frame" x="108" y="441" width="159" height="36"/>
                                 <fontDescription key="fontDescription" name="Raleway-Black" family="Raleway" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jambit_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ytO-lc-D5N">
+                                <rect key="frame" x="172.66666666666666" y="391" width="30" height="30"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.80784313730000001" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ytO-lc-D5N" firstAttribute="centerX" secondItem="xxq-7G-wH8" secondAttribute="centerX" id="Ht3-ZA-hFT"/>
+                            <constraint firstItem="ytO-lc-D5N" firstAttribute="centerY" secondItem="xxq-7G-wH8" secondAttribute="centerY" id="gYL-Pp-3Yy"/>
+                            <constraint firstItem="5fa-uO-5cW" firstAttribute="centerX" secondItem="xxq-7G-wH8" secondAttribute="centerX" id="stA-y2-vkN"/>
+                            <constraint firstItem="5fa-uO-5cW" firstAttribute="top" secondItem="ytO-lc-D5N" secondAttribute="bottom" constant="20" id="tuU-VN-yVU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3VB-mH-Avq"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hY-i7-KF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-983" y="164"/>
+            <point key="canvasLocation" x="-2762" y="894"/>
         </scene>
         <!--Contain View Controller-->
         <scene sceneID="kIb-FS-5dt">
@@ -413,12 +419,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPa-UN-Zl0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1745" y="896"/>
+            <point key="canvasLocation" x="-1612" y="896"/>
         </scene>
         <!--Kickertische-->
         <scene sceneID="xcB-i1-7mA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4uY-ta-c8C" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4uY-ta-c8C" customClass="ContainerNavigationController" customModule="KickerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Kickertische" image="jambit_logo" id="S9S-BR-6Ek"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZaN-nA-Osb">
@@ -488,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFZ-D3-EEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1838" y="1691"/>
+            <point key="canvasLocation" x="-1613" y="1705"/>
         </scene>
     </scenes>
     <resources>

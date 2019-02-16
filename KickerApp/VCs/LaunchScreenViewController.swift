@@ -8,15 +8,16 @@
 
 import UIKit
 
-public class LaunchScreenViewController: UIViewController {
+public class LaunchScreenViewController: UIViewController, Storyboarded {
+
+    weak var coordinator: MainCoordinator?
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.splashTimeOut(sender:)), userInfo: nil, repeats: false)
+        view.backgroundColor = .clear
+        view.setGradientBackground(color1: UIColor(red:1.00, green:0.69, blue:0.74, alpha:1.0), color2: UIColor(red:1.00, green:0.76, blue:0.63, alpha:1.0))
+        view.frame = view.bounds
     }
 
-    @objc func splashTimeOut(sender : Timer){
-        performSegue(withIdentifier: "tabBarView", sender: self)
-    }
 }
 

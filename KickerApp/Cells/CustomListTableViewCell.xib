@@ -42,9 +42,6 @@
                         <state key="normal" image="iconclose">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
-                        <connections>
-                            <action selector="deleteUser:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bgh-XP-HU8"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>

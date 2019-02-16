@@ -14,6 +14,7 @@
 		76682896221736E100368F8E /* FoosballService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682891221736E100368F8E /* FoosballService.swift */; };
 		76682897221736E100368F8E /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682893221736E100368F8E /* ViewControllerCoordinator.swift */; };
 		76682898221736E100368F8E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682894221736E100368F8E /* MainCoordinator.swift */; };
+		7668289A22182A5200368F8E /* ContainerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7668289922182A5200368F8E /* ContainerNavigationController.swift */; };
 		76C7687B21F1374F004C29B6 /* CustomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7687921F1374F004C29B6 /* CustomListTableViewCell.swift */; };
 		76C7687C21F1374F004C29B6 /* CustomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7687A21F1374F004C29B6 /* CustomListTableViewCell.xib */; };
 		76CB3BF021FE0C3900832B9B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CB3BEF21FE0C3900832B9B /* GradientView.swift */; };
@@ -29,7 +30,6 @@
 		76F2D1FC21EE42A40049333F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D1FA21EE42A40049333F /* Main.storyboard */; };
 		76F2D1FF21EE42A40049333F /* KickerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D1FD21EE42A40049333F /* KickerApp.xcdatamodeld */; };
 		76F2D20121EE42A50049333F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D20021EE42A50049333F /* Assets.xcassets */; };
-		76F2D20421EE42A50049333F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D20221EE42A50049333F /* LaunchScreen.storyboard */; };
 		76F2D20E21EE42DE0049333F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D20D21EE42DE0049333F /* Users.swift */; };
 		76F2D21021EE44DF0049333F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F2D20F21EE44DF0049333F /* Alamofire.framework */; };
 		76F2D21121EE44DF0049333F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76F2D20F21EE44DF0049333F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -64,6 +64,7 @@
 		76682891221736E100368F8E /* FoosballService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoosballService.swift; sourceTree = "<group>"; };
 		76682893221736E100368F8E /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		76682894221736E100368F8E /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7668289922182A5200368F8E /* ContainerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerNavigationController.swift; sourceTree = "<group>"; };
 		76C7687921F1374F004C29B6 /* CustomListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListTableViewCell.swift; sourceTree = "<group>"; };
 		76C7687A21F1374F004C29B6 /* CustomListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomListTableViewCell.xib; sourceTree = "<group>"; };
 		76CB3BEF21FE0C3900832B9B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		76F2D1FB21EE42A40049333F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76F2D1FE21EE42A40049333F /* KickerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KickerApp.xcdatamodel; sourceTree = "<group>"; };
 		76F2D20021EE42A50049333F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76F2D20321EE42A50049333F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76F2D20521EE42A50049333F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F2D20D21EE42DE0049333F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		76F2D20F21EE44DF0049333F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -174,7 +174,6 @@
 				76F2D1F621EE42A40049333F /* AppDelegate.swift */,
 				76F2D1FA21EE42A40049333F /* Main.storyboard */,
 				76F2D20021EE42A50049333F /* Assets.xcassets */,
-				76F2D20221EE42A50049333F /* LaunchScreen.storyboard */,
 				76F2D20521EE42A50049333F /* Info.plist */,
 				76F2D1FD21EE42A40049333F /* KickerApp.xcdatamodeld */,
 			);
@@ -216,6 +215,7 @@
 				76CDA3C321FB7A6400594BF0 /* CustomSideMenuViewController.swift */,
 				76CDA3C921FBB0E100594BF0 /* ContainViewController.swift */,
 				76CB3BEF21FE0C3900832B9B /* GradientView.swift */,
+				7668289922182A5200368F8E /* ContainerNavigationController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -293,7 +293,6 @@
 				76C7687C21F1374F004C29B6 /* CustomListTableViewCell.xib in Resources */,
 				76CF324421EF6A1A00FE11F3 /* Raleway-ExtraLight.ttf in Resources */,
 				76CF324521EF6A1A00FE11F3 /* Raleway-Black.ttf in Resources */,
-				76F2D20421EE42A50049333F /* LaunchScreen.storyboard in Resources */,
 				76F2D21C21EF3B780049333F /* Montserrat-Bold.ttf in Resources */,
 				76CF324721EF6A1A00FE11F3 /* Raleway-Bold.ttf in Resources */,
 				76F2D20121EE42A50049333F /* Assets.xcassets in Resources */,
@@ -349,6 +348,7 @@
 				76CDA3C421FB7A6400594BF0 /* CustomSideMenuViewController.swift in Sources */,
 				76682895221736E100368F8E /* UserService.swift in Sources */,
 				76C7687B21F1374F004C29B6 /* CustomListTableViewCell.swift in Sources */,
+				7668289A22182A5200368F8E /* ContainerNavigationController.swift in Sources */,
 				76F2D1F721EE42A40049333F /* AppDelegate.swift in Sources */,
 				76CDA3CA21FBB0E100594BF0 /* ContainViewController.swift in Sources */,
 				7651129121EFAE0A00E30564 /* StatisticViewController.swift in Sources */,
@@ -365,14 +365,6 @@
 				76F2D1FB21EE42A40049333F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		76F2D20221EE42A50049333F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76F2D20321EE42A50049333F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -15,10 +15,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var textFieldView: UIView!
     @IBOutlet var textFieldViewHeight: NSLayoutConstraint!
 
-    @IBAction func openSideMenu(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name("toggleSideMenu"), object: nil)
-    }
-
+    //MARK: Properties
     weak var coordinator: MainCoordinator?
     var users = [UserInfo]()
     var savedUserName = UserDefaults.standard.string(forKey: "savedUserName")
@@ -31,7 +28,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         registerCustomCell()
         setupNameTextFieldView()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(deleteUser), name: NSNotification.Name("deleteUser"), object: nil)
         addButton.isHidden = false
     }
 
@@ -90,16 +86,20 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let user = users[indexPath.row]
         setupUsernameCell(cell, for: user.name)
         cell.userImage.image = UIImage(named: "user")
-
+        cell.deleteButton.addTarget(self, action: #selector(deleteUser), for: .touchUpInside)
         if cell.userName.text == savedUserName {
-                cell.deleteButton.isHidden = false
-                addButton.isHidden = true
+                displayButtons(accordingTo: UserOption.reserved, for: cell)
         } else {
-            cell.deleteButton.isHidden = true
+           // cell.deleteButton.isHidden = true
+            displayButtons(accordingTo: UserOption.notReserved, for: cell)
         }
-
-
         return cell
+    }
+
+    @objc func deleteUser () {
+        let savedUser = users.first(where: { $0.name == savedUserName })
+        UserService.shared.deleteUSer(user: savedUser)
+        addButton.isHidden = false
     }
 
     private func setupUsernameCell(_ cell: CustomListTableViewCell, for username: String) {
@@ -153,25 +153,18 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         nameTextField.becomeFirstResponder()
     }
 
-    @objc func deleteUser() {
-        let savedUser = users.first(where: { $0.name == savedUserName })
-        UserService.shared.deleteUSer(user: savedUser)
-        addButton.isHidden = false
-    }
-
-    enum UserState {
+    enum UserOption {
         case reserved
         case notReserved
     }
-
-//    private func displayButtons(accordingTo states: UserState, for cell: CustomListTableViewCell) {
-//        switch states {
-//        case .reserved:
-//            addButton.isHidden = true
-//            cell.deleteButton.isHidden = false
-//        case .notReserved:
-//            addButton.isHidden = false
-//           cell.deleteButton.isHidden = true
-//        }
-//    }
+    private func displayButtons(accordingTo option: UserOption, for cell: CustomListTableViewCell) {
+        switch option {
+        case .reserved:
+            addButton.isHidden = true
+            cell.deleteButton.isHidden = false
+        case .notReserved:
+           // addButton.isHidden = false
+           cell.deleteButton.isHidden = true
+        }
+    }
 }
