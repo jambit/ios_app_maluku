@@ -83,3 +83,14 @@ struct CustomColors {
     var orangeDark = UIColor(red: 1.00, green: 0.52, blue: 0.36, alpha: 0.5)
     var orangeLight = UIColor(red: 1.00, green: 0.65, blue: 0.00, alpha: 1.0)
 }
+
+struct GradientColor {
+    var orange1 = UIColor(red:1.00, green:0.69, blue:0.74, alpha:1.0)
+    var orange2 = UIColor(red:1.00, green:0.76, blue:0.63, alpha:1.0)
+    var orangeLight1 = UIColor(red:1.00, green:0.76, blue:0.63, alpha:1.0)
+    var orangeLight2 = UIColor(red:0.98, green:0.67, blue:0.49, alpha:1.0)
+    var yellow1 = UIColor(red:0.98, green:0.67, blue:0.49, alpha:1.0)
+    var yellow2 = UIColor(red:0.97, green:0.81, blue:0.41, alpha:1.0)
+    var blue1 = UIColor(red:0.56, green:0.77, blue:0.99, alpha:1.0)
+    var blue2 = UIColor(red:0.88, green:0.76, blue:0.99, alpha:1.0)
+}
