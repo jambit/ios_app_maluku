@@ -24,9 +24,9 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
     private var timer: Timer?
     private var indexOfCellBeforeDragging = 0
     private let tables: [FoosballTable] = { () -> [FoosballTable] in
-        let table1 = FoosballTable(name: "Manfred-Harrer-Stadion", backgroundColor: CustomColors().orangeDark, notOccupiedImage: UIImage(named: "kicker_table3_free"), occupiedImage: UIImage(named: "kicker_table3_occupied"))
-        let table2 = FoosballTable(name: "Arnim-Kreutzer-Arena", backgroundColor: CustomColors().orangeLight, notOccupiedImage: UIImage(named: "kicker_table2_free"), occupiedImage: UIImage(named: "kicker_table2_occupied"))
-        let table3 = FoosballTable(name: "Die Berries", backgroundColor: CustomColors().lightYellow, notOccupiedImage: UIImage(named: "kicker_table1_free"), occupiedImage: UIImage(
+        let table1 = FoosballTable(name: "Manfred-Harrer-Stadion", backgroundColor: CustomColor.orangeDark, notOccupiedImage: UIImage(named: "kicker_table3_free"), occupiedImage: UIImage(named: "kicker_table3_occupied"))
+        let table2 = FoosballTable(name: "Arnim-Kreutzer-Arena", backgroundColor: CustomColor.orangeLight, notOccupiedImage: UIImage(named: "kicker_table2_free"), occupiedImage: UIImage(named: "kicker_table2_occupied"))
+        let table3 = FoosballTable(name: "Die Berries", backgroundColor: CustomColor.lightYellow, notOccupiedImage: UIImage(named: "kicker_table1_free"), occupiedImage: UIImage(
             named: "kicker_table1_occupied"))
         return [table1, table2, table3]
 
@@ -155,12 +155,12 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     private func setUpCellLabel(of cell: FoosballCollectionViewCell, for tableName: String) {
         cell.nameOfTable.text = tableName.uppercased()
-        cell.nameOfTable.font = CustomFont().ralewayBlackWithSize(20)
+        cell.nameOfTable.font = CustomFont.ralewayBlackWithSize(20)
         cell.nameOfTable.textColor = UIColor.white
     }
 
     private func setupTitle(of label: UILabel) {
-        label.font = CustomFont().ralewayBlackWithSize(35)
+        label.font = CustomFont.ralewayBlackWithSize(35)
         label.textColor = UIColor.white
         label.numberOfLines = 0
         label.lineBreakMode = .byCharWrapping
@@ -178,7 +178,7 @@ class FoosballViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         setupTitle(of: foosballTitleLabel)
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
-        currentTimeLabel.font = CustomFont().ralewayLightWithSize(20)
+        currentTimeLabel.font = CustomFont.ralewayLightWithSize(20)
         currentTimeLabel.textColor = .white
         gradientView1.frame = view.bounds
         gradientView2.frame = view.bounds

@@ -30,21 +30,21 @@ class GradientView: UIView {
 
 class GradientView1: GradientView {
     override func setupView() {
-        setGradientBackground(color1: GradientColor().orange1, color2: GradientColor().orange2)
+        setGradientBackground(color1: GradientColor.orange1, color2: GradientColor.orange2)
         frame = bounds
     }
 }
 
 class GradientView2: GradientView {
     override func setupView() {
-        setGradientBackground(color1: GradientColor().blue1, color2: GradientColor().blue2)
+        setGradientBackground(color1: GradientColor.orangeLight1, color2: GradientColor.orangeLight2)
         frame = bounds
     }
 }
 
 class GradientView3: GradientView {
     override func setupView() {
-        setGradientBackground(color1: GradientColor().yellow1, color2: GradientColor().yellow2)
+        setGradientBackground(color1: GradientColor.yellow1, color2: GradientColor.yellow2)
         frame = bounds
     }
 }

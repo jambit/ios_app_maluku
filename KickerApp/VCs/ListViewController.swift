@@ -43,8 +43,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         textFieldView.isHidden = true
         nameTextField.delegate = self
         nameTextField.layer.borderColor = UIColor.clear.cgColor
-        nameTextField.textColor = CustomColors().orangeDark
-        nameTextField.font = CustomFont().ralewayLightWithSize(34)
+        nameTextField.textColor = CustomColor.orangeDark
+        nameTextField.font = CustomFont.ralewayLightWithSize(34)
     }
 
     @objc private func keyboardWasShown(notification: NSNotification) {
@@ -105,7 +105,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private func setupUsernameCell(_ cell: CustomListTableViewCell, for username: String) {
         cell.userName.text = rawUsername(username)
         cell.userName.lineBreakMode = .byCharWrapping
-        cell.userName.font = CustomFont().ralewayLightWithSize(25)
+        cell.userName.font = CustomFont.ralewayLightWithSize(25)
         cell.userName.textColor = UIColor.black
     }
 

@@ -39,7 +39,7 @@ class CustomSideMenuViewController: UIViewController, UITableViewDelegate, UITab
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = sideMenuTableView.dequeueReusableCell(withIdentifier: "customListTableViewCell", for: indexPath) as? CustomListTableViewCell else { return UITableViewCell() }
-        cell.userName.font = CustomFont().ralewayLightWithSize(20)
+        cell.userName.font = CustomFont.ralewayLightWithSize(20)
         cell.userName.lineBreakMode = .byCharWrapping
         cell.userName.textColor = UIColor.gray
         cell.userName?.text = options[indexPath.row].title
