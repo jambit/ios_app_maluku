@@ -1,0 +1,62 @@
+[
+  {
+    "table": 1,
+    "id": 1,
+    "occupied": false
+  },
+  {
+    "table": 1,
+    "id": 4,
+    "occupied": false
+  },
+  {
+    "table": 1,
+    "id": 3,
+    "occupied": false
+  },
+  {
+    "table": 1,
+    "id": 1,
+    "occupied": true
+  },
+  {
+    "table": 2,
+    "id": 1,
+    "occupied": true
+  },
+  {
+    "table": 2,
+    "id": 3,
+    "occupied": false
+  },
+  {
+    "table": 2,
+    "id": 2,
+    "occupied": false
+  },
+  {
+    "table": 2,
+    "id": 4,
+    "occupied": true
+  },
+  {
+    "table": 3,
+    "id": 2,
+    "occupied": true
+  },
+  {
+    "table": 3,
+    "id": 3,
+    "occupied": false
+  },
+    {
+    "table": 3,
+    "id": 2,
+    "occupied": true
+  },
+  {
+    "table": 3,
+    "id": 3,
+    "occupied": false
+  }
+]

@@ -10,12 +10,13 @@ import UIKit
 
 public class LaunchScreenViewController: UIViewController, Storyboarded {
 
+    @IBOutlet weak var imageView: UIImageView!
     weak var coordinator: MainCoordinator?
 
     override public func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .clear
-        view.setGradientBackground(color1: UIColor(red:1.00, green:0.69, blue:0.74, alpha:1.0), color2: UIColor(red:1.00, green:0.76, blue:0.63, alpha:1.0))
+        view.setGradientBackground(color1: UIColor(red:0.95, green:0.63, blue:0.51, alpha: 1.0), color2: UIColor(red:1.00, green:0.56, blue:0.41, alpha: 1.0))
         view.frame = view.bounds
     }
 

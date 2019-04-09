@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct UserInfo: Codable {
+struct User: Codable {
     var name: String
     var id: String
     var room: String?

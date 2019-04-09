@@ -30,34 +30,33 @@ class GradientView: UIView {
 
 class GradientView1: GradientView {
     override func setupView() {
-        setGradientBackground(color1: GradientColor.orange1, color2: GradientColor.orange2)
+        setGradientBackground(color1: GradientColor.orangeLight1, color2: GradientColor.orangeLight2)
         frame = bounds
     }
 }
 
 class GradientView2: GradientView {
     override func setupView() {
-        setGradientBackground(color1: GradientColor.orangeLight1, color2: GradientColor.orangeLight2)
+        //yellow
+        setGradientBackground(color1: GradientColor.sunkiss1, color2: GradientColor.sunkiss2)
         frame = bounds
     }
 }
 
 class GradientView3: GradientView {
     override func setupView() {
-        setGradientBackground(color1: GradientColor.yellow1, color2: GradientColor.yellow2)
+        setGradientBackground(color1: GradientColor.orange1, color2: GradientColor.orange2)
         frame = bounds
     }
 }
 
 extension UIView {
     func setGradientBackground(color1: UIColor, color2: UIColor) {
-        let gradientView = UIView(frame: frame)
         let gradientLayer: CAGradientLayer = CAGradientLayer()
-        gradientLayer.frame.size = gradientView.frame.size
+        gradientLayer.frame = bounds
         gradientLayer.colors = [color1.cgColor, color2.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
-        gradientView.layer.addSublayer(gradientLayer)
-        insertSubview(gradientView, at: 0)
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 }

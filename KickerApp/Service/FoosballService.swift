@@ -9,9 +9,9 @@
 import Alamofire
 import Foundation
 
-class FoosballService {
+public class FoosballService {
     static let shared = FoosballService()
-    private let baseUrl = "http://azubisrv.jambit.com/api/sonic-sensors/status"
+    private let baseUrl = "http://kicker.jambit.com/api/sonic-sensors/status"
     private let utilityQueue = DispatchQueue.global(qos: .utility)
 
     private init() {}
@@ -43,5 +43,22 @@ class FoosballService {
             return jsonKickerInfo
         }
         return nil
+    }
+    
+    //Filter occupied tables
+    func occupiedTables(in foosballTables: [FoosballTableCodable]) -> [Int] {
+        var tables: [Int: Table] = [:]
+        for kickerTable in foosballTables {
+            var table = tables[kickerTable.table]
+            if table == nil {
+                table = Table()
+                tables[kickerTable.table] = table
+            }
+            if kickerTable.occupied {
+                table?.occupiedPlaces.append(kickerTable.id)
+            }
+        }
+       return tables.filter({ $0.value.occupiedPlaces.count >= 2 }).map({ $0.key })
+
     }
 }

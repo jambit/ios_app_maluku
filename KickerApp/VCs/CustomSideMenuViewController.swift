@@ -8,74 +8,68 @@
 
 import UIKit
 
-struct Option: Equatable {
-    var title: String
-    var icon: UIImage
+class CustomSideMenuViewController: UIViewController, Storyboarded {
 
-    init(title: String, icon: UIImage?) {
-        self.title = title
-        self.icon = icon ?? UIImage()
+    // MARK: - Outlets
+    @IBOutlet private weak var sideMenuTableView: UITableView!
+
+    // MARK: - Properties
+    weak var coordinator: MainCoordinator?
+    var containerNavigatonController: ContainerNavigationController?
+    private let viewModel = CustomBarItemViewModel()
+
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        registerTableCell()
+        setUpTableView()
+        view.backgroundColor = .clear
     }
 }
 
-class CustomSideMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, Storyboarded {
-    @IBOutlet weak var sideMenuTableView: UITableView!
-    @IBAction func closeSideMenu(_ sender: Any) {
-                NotificationCenter.default.post(name: NSNotification.Name("toggleSideMenu"), object: nil)
-    }
-   weak var coordinator: MainCoordinator?
-    var containerNavigatonController: ContainerNavigationController?
+// MARK: - Table View
+extension CustomSideMenuViewController: UITableViewDelegate, UITableViewDataSource {
 
-    private let options : [Option] = {() -> [Option] in
-        var options: [Option] = []
-        options.append(Option(title: "Kickertische", icon: UIImage(named: "foosball_gray1")))
-        options.append(Option(title: "Liste", icon: UIImage(named: "list_gray1")))
-        return options
-    }()
+    private func setUpTableView() {
+        sideMenuTableView.backgroundColor = .clear
+        sideMenuTableView.isScrollEnabled = false
+    }
+
+    private func registerTableCell () {
+        let customCell = UINib(nibName: viewModel.cellIdentifier, bundle: Bundle.main)
+        sideMenuTableView.register(customCell, forCellReuseIdentifier: viewModel.cellIdentifier)
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return options.count
+        return viewModel.items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = sideMenuTableView.dequeueReusableCell(withIdentifier: "customListTableViewCell", for: indexPath) as? CustomListTableViewCell else { return UITableViewCell() }
-        cell.userName.font = CustomFont.ralewayLightWithSize(20)
-        cell.userName.lineBreakMode = .byCharWrapping
-        cell.userName.textColor = UIColor.gray
-        cell.userName?.text = options[indexPath.row].title
-        cell.userImage.image = options[indexPath.row].icon
-        cell.layer.masksToBounds = true
+        guard let cell = sideMenuTableView.dequeueReusableCell(withIdentifier: viewModel.cellIdentifier, for: indexPath) as? CustomBarItem else { return UITableViewCell() }
+        let item = viewModel.items[indexPath.row]
+        cell.setUp(item)
         return cell
     }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? CustomListTableViewCell else { return}
-        guard let containerNavigatonController = containerNavigatonController else {return}
-        if cell.userName.text == options[1].title {
-            coordinator?.openListView(from: containerNavigatonController)
-            NotificationCenter.default.post(name: NSNotification.Name("toggleSideMenu"), object: nil)
-        } else {
-            coordinator?.openFoosballView(from: containerNavigatonController)
-            NotificationCenter.default.post(name: NSNotification.Name("toggleSideMenu"), object: nil)
-        }
+        guard let cell = tableView.cellForRow(at: indexPath) as? CustomBarItem else { return }
+        guard let cellType = cell.itemType else { return }
+        openView(itemType: cellType)
+        toogleMenuBar()
+
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
 
-    private func registerTableCell () {
-        let customCell = UINib(nibName: "CustomListTableViewCell", bundle: Bundle.main)
-        sideMenuTableView.register(customCell, forCellReuseIdentifier: "customListTableViewCell")
+    private func openView(itemType: ItemType) {
+        guard let containerNavigatonController = containerNavigatonController else { return }
+        switch itemType {
+        case .foosball:
+            coordinator?.openFoosballView(from: containerNavigatonController)
+        case .list:
+            coordinator?.openListView(from: containerNavigatonController)
+        }
     }
-
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.alpha = 0.95
-        sideMenuTableView.backgroundColor = .clear
-        registerTableCell()
-    }
-
-
 }

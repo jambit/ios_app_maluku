@@ -17,16 +17,16 @@ public class MainCoordinator: Coordinator {
     }
 
     func openContainerView() {
-        let vc = ContainViewController.instantiate()
+        let vc = ContainerViewController.instantiate()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.pushViewController(vc, animated: false)
     }
 
     func start() {
         let launchScreen = LaunchScreenViewController.instantiate()
         launchScreen.coordinator = self
         navigationController.pushViewController(launchScreen, animated: false)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
             [weak self] in
             self?.openContainerView()
         })
@@ -43,10 +43,4 @@ public class MainCoordinator: Coordinator {
         vc.coordinator = self
         containerNavigationController.pushViewController(vc, animated: true)
     }
-
-    func openStatisticView(from containerNavigationController: ContainerNavigationController) {
-        let vc = ListViewController.instantiate()
-        vc.coordinator = self
-        containerNavigationController.pushViewController(vc, animated: true)
-        }
 }

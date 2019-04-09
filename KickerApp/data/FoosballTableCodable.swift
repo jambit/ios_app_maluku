@@ -15,18 +15,7 @@ struct FoosballTableCodable: Codable {
     var occupied: Bool
 }
 
-struct FoosballTable {
-    var name: String
-    var backgroundColor: UIColor
-    var notOccupiedImage: UIImage?
-    var occupiedImage: UIImage?
-    
-
-    init(name: String, backgroundColor: UIColor, notOccupiedImage: UIImage?, occupiedImage: UIImage?) {
-        self.name = name
-        self.backgroundColor = backgroundColor
-        self.notOccupiedImage = notOccupiedImage
-        self.occupiedImage = occupiedImage
-    }
+class Table {
+    var occupiedPlaces: [Int] = []
+    init() {}
 }
-

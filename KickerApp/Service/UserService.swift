@@ -12,15 +12,19 @@ import Foundation
 
 class UserService {
     static let shared = UserService()
-    private let baseUrlGet = "http://azubisrv.jambit.com/api/user-liste/users"
-    private let baseUrlPost = "http://azubisrv.jambit.com/api/user-liste/add-user?user="
-    private let baseUrlDelete = "http://azubisrv.jambit.com/api/user-liste/delete-user"
+
+    private enum URL {
+        static let get = "http://kicker.jambit.com/api/user-liste/users"
+        static let post = "http://kicker.jambit.com/api/user-liste/add-user?user="
+        static let delete = "http://kicker.jambit.com/api/user-liste/delete-user"
+    }
+
     private let utilityQueue = DispatchQueue.global(qos: .utility)
 
     private init() {}
 
-    func getUserInfo(completionHandler: @escaping ([UserInfo]) -> Void) {
-        Alamofire.request(baseUrlGet).responseJSON(queue: utilityQueue) { [weak self] response in
+    func getUserInfo(completionHandler: @escaping ([User]) -> Void) {
+        Alamofire.request(URL.get).responseJSON(queue: utilityQueue) { [weak self] response in
             switch response.result {
             case .success:
                 DispatchQueue.main.async {
@@ -35,10 +39,10 @@ class UserService {
         }
     }
 
-    private func parseUserInfo(json: Data?) -> [UserInfo]? {
+    private func parseUserInfo(json: Data?) -> [User]? {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        if let data = json, let jsonUserInfo = try? decoder.decode([UserInfo].self, from: data) {
+        if let data = json, let jsonUserInfo = try? decoder.decode([User].self, from: data) {
             return jsonUserInfo
         }
         return nil
@@ -46,13 +50,11 @@ class UserService {
 
     func addUser(nameOfUser: String) {
         guard let name = nameOfUser.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return }
-        let addUrl = baseUrlPost + name
+        let addUrl = URL.post + name
         Alamofire.request(addUrl, method: .post)
-        let savedUser = nameOfUser
-        UserDefaults.standard.set(savedUser, forKey: "savedUser")
     }
 
-    func deleteUSer(user: UserInfo?) {
+    func deleteUser(user: User?) {
         guard let user = user else { return }
         let jsonEncoder = JSONEncoder()
         let headers: HTTPHeaders = [
@@ -62,7 +64,7 @@ class UserService {
         guard let jsonData = try? jsonEncoder.encode(user) else { return }
         do {
             let params = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
-            Alamofire.request(baseUrlDelete, method: .delete, parameters: params, encoding: JSONEncoding.default, headers: headers)
+            Alamofire.request(URL.delete, method: .delete, parameters: params, encoding: JSONEncoding.default, headers: headers)
         } catch {
             print(error)
         }

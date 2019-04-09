@@ -7,19 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		764FE4AD22344768001733E5 /* CustomBarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FE4AC22344768001733E5 /* CustomBarItemViewModel.swift */; };
+		764FE4B022344ED2001733E5 /* CustomBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764FE4AE22344ED2001733E5 /* CustomBarItem.xib */; };
+		764FE4B122344ED2001733E5 /* CustomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FE4AF22344ED2001733E5 /* CustomBarItem.swift */; };
+		764FE4B3223460C0001733E5 /* ContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FE4B2223460C0001733E5 /* ContainerViewModel.swift */; };
 		7651095321F9AF4D00EADDE3 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651095221F9AF4D00EADDE3 /* LaunchScreenViewController.swift */; };
 		7651128F21EFAA9000E30564 /* FoosballTableCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651128E21EFAA9000E30564 /* FoosballTableCodable.swift */; };
-		7651129121EFAE0A00E30564 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651129021EFAE0A00E30564 /* StatisticViewController.swift */; };
 		76682895221736E100368F8E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682890221736E100368F8E /* UserService.swift */; };
 		76682896221736E100368F8E /* FoosballService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682891221736E100368F8E /* FoosballService.swift */; };
 		76682897221736E100368F8E /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682893221736E100368F8E /* ViewControllerCoordinator.swift */; };
 		76682898221736E100368F8E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76682894221736E100368F8E /* MainCoordinator.swift */; };
 		7668289A22182A5200368F8E /* ContainerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7668289922182A5200368F8E /* ContainerNavigationController.swift */; };
+		768F2FC22246599E00AB88E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768F2FC12246599E00AB88E3 /* Assets.xcassets */; };
+		76BFE5BA2246AD6300DC0409 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BFE5B92246AD6300DC0409 /* ListViewModel.swift */; };
+		76BFE5BC2246DAB900DC0409 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BFE5BB2246DAB900DC0409 /* UserManager.swift */; };
+		76BFE5C1224702C300DC0409 /* Gilroy-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BFE5C02247018900DC0409 /* Gilroy-ExtraBold.ttf */; };
+		76BFE5C2224702C700DC0409 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BFE5BF2247018900DC0409 /* Gilroy-Light.ttf */; };
+		76BFE5D42247059C00DC0409 /* FoosballTable.json in Resources */ = {isa = PBXBuildFile; fileRef = 76BFE5D02247059C00DC0409 /* FoosballTable.json */; };
+		76BFE5D7224705C800DC0409 /* KickerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BFE5CE2247059C00DC0409 /* KickerAppTests.swift */; };
+		76BFE5D8224705CE00DC0409 /* FoosballServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BFE5D12247059C00DC0409 /* FoosballServiceTest.swift */; };
 		76C7687B21F1374F004C29B6 /* CustomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7687921F1374F004C29B6 /* CustomListTableViewCell.swift */; };
 		76C7687C21F1374F004C29B6 /* CustomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7687A21F1374F004C29B6 /* CustomListTableViewCell.xib */; };
 		76CB3BF021FE0C3900832B9B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CB3BEF21FE0C3900832B9B /* GradientView.swift */; };
 		76CDA3C421FB7A6400594BF0 /* CustomSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CDA3C321FB7A6400594BF0 /* CustomSideMenuViewController.swift */; };
-		76CDA3CA21FBB0E100594BF0 /* ContainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CDA3C921FBB0E100594BF0 /* ContainViewController.swift */; };
+		76CDA3CA21FBB0E100594BF0 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CDA3C921FBB0E100594BF0 /* ContainerViewController.swift */; };
 		76CF324421EF6A1A00FE11F3 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76CF324021EF6A1A00FE11F3 /* Raleway-ExtraLight.ttf */; };
 		76CF324521EF6A1A00FE11F3 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76CF324121EF6A1A00FE11F3 /* Raleway-Black.ttf */; };
 		76CF324621EF6A1A00FE11F3 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76CF324221EF6A1A00FE11F3 /* Raleway-Medium.ttf */; };
@@ -29,17 +40,26 @@
 		76F2D1F921EE42A40049333F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D1F821EE42A40049333F /* ListViewController.swift */; };
 		76F2D1FC21EE42A40049333F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D1FA21EE42A40049333F /* Main.storyboard */; };
 		76F2D1FF21EE42A40049333F /* KickerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D1FD21EE42A40049333F /* KickerApp.xcdatamodeld */; };
-		76F2D20121EE42A50049333F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D20021EE42A50049333F /* Assets.xcassets */; };
 		76F2D20E21EE42DE0049333F /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D20D21EE42DE0049333F /* Users.swift */; };
-		76F2D21021EE44DF0049333F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F2D20F21EE44DF0049333F /* Alamofire.framework */; };
-		76F2D21121EE44DF0049333F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76F2D20F21EE44DF0049333F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76F2D21921EF3B780049333F /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D21321EF3B780049333F /* Design.swift */; };
 		76F2D21A21EF3B780049333F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D21521EF3B780049333F /* Montserrat-Medium.ttf */; };
 		76F2D21B21EF3B780049333F /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D21621EF3B780049333F /* Montserrat-Light.ttf */; };
 		76F2D21C21EF3B780049333F /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D21721EF3B780049333F /* Montserrat-Bold.ttf */; };
 		76F2D21D21EF3B780049333F /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D21821EF3B780049333F /* Montserrat-Black.ttf */; };
 		76F2D22321EF48EF0049333F /* FoosballViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2D22221EF48EF0049333F /* FoosballViewController.swift */; };
+		76F8040C22217EC100623E1F /* FoosballTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8040B22217EC100623E1F /* FoosballTableViewModel.swift */; };
+		B1D1EDC6A6F9EB6E8DD4A3C5 /* Pods_KickerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6894B593C1648A2861418C46 /* Pods_KickerApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76F804192221EA4800623E1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76F2D1EB21EE42A40049333F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76F2D1F221EE42A40049333F;
+			remoteInfo = KickerApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		76F2D21221EE44DF0049333F /* Embed Frameworks */ = {
@@ -48,7 +68,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				76F2D21121EE44DF0049333F /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,19 +76,31 @@
 
 /* Begin PBXFileReference section */
 		6894B593C1648A2861418C46 /* Pods_KickerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KickerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		764FE4AC22344768001733E5 /* CustomBarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarItemViewModel.swift; sourceTree = "<group>"; };
+		764FE4AE22344ED2001733E5 /* CustomBarItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomBarItem.xib; sourceTree = "<group>"; };
+		764FE4AF22344ED2001733E5 /* CustomBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBarItem.swift; sourceTree = "<group>"; };
+		764FE4B2223460C0001733E5 /* ContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewModel.swift; sourceTree = "<group>"; };
 		7651095221F9AF4D00EADDE3 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7651128E21EFAA9000E30564 /* FoosballTableCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoosballTableCodable.swift; sourceTree = "<group>"; };
-		7651129021EFAE0A00E30564 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		76682890221736E100368F8E /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		76682891221736E100368F8E /* FoosballService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoosballService.swift; sourceTree = "<group>"; };
 		76682893221736E100368F8E /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
 		76682894221736E100368F8E /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		7668289922182A5200368F8E /* ContainerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerNavigationController.swift; sourceTree = "<group>"; };
+		768F2FC12246599E00AB88E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76BFE5B92246AD6300DC0409 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		76BFE5BB2246DAB900DC0409 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		76BFE5BF2247018900DC0409 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
+		76BFE5C02247018900DC0409 /* Gilroy-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.ttf"; sourceTree = "<group>"; };
+		76BFE5CE2247059C00DC0409 /* KickerAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KickerAppTests.swift; sourceTree = "<group>"; };
+		76BFE5D02247059C00DC0409 /* FoosballTable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoosballTable.json; sourceTree = "<group>"; };
+		76BFE5D12247059C00DC0409 /* FoosballServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoosballServiceTest.swift; sourceTree = "<group>"; };
+		76BFE5D22247059C00DC0409 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76C7687921F1374F004C29B6 /* CustomListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListTableViewCell.swift; sourceTree = "<group>"; };
 		76C7687A21F1374F004C29B6 /* CustomListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomListTableViewCell.xib; sourceTree = "<group>"; };
 		76CB3BEF21FE0C3900832B9B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		76CDA3C321FB7A6400594BF0 /* CustomSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSideMenuViewController.swift; sourceTree = "<group>"; };
-		76CDA3C921FBB0E100594BF0 /* ContainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainViewController.swift; sourceTree = "<group>"; };
+		76CDA3C921FBB0E100594BF0 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		76CF324021EF6A1A00FE11F3 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
 		76CF324121EF6A1A00FE11F3 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		76CF324221EF6A1A00FE11F3 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
@@ -80,16 +111,16 @@
 		76F2D1F821EE42A40049333F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		76F2D1FB21EE42A40049333F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76F2D1FE21EE42A40049333F /* KickerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KickerApp.xcdatamodel; sourceTree = "<group>"; };
-		76F2D20021EE42A50049333F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F2D20521EE42A50049333F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F2D20D21EE42DE0049333F /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		76F2D20F21EE44DF0049333F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		76F2D21321EF3B780049333F /* Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		76F2D21521EF3B780049333F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		76F2D21621EF3B780049333F /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		76F2D21721EF3B780049333F /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		76F2D21821EF3B780049333F /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		76F2D22221EF48EF0049333F /* FoosballViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoosballViewController.swift; path = KickerApp/VCs/FoosballViewController.swift; sourceTree = SOURCE_ROOT; };
+		76F8040B22217EC100623E1F /* FoosballTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoosballTableViewModel.swift; sourceTree = "<group>"; };
+		76F804142221EA4800623E1F /* KickerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DD87EB8927E2304910FCA8 /* Pods-KickerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KickerApp/Pods-KickerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0EC56CCCFD76AE079721806 /* Pods-KickerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-KickerApp/Pods-KickerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +130,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F2D21021EE44DF0049333F /* Alamofire.framework in Frameworks */,
+				B1D1EDC6A6F9EB6E8DD4A3C5 /* Pods_KickerApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76F804112221EA4800623E1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,11 +171,31 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		76BFE5CD2247059C00DC0409 /* KickerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				76BFE5CE2247059C00DC0409 /* KickerAppTests.swift */,
+				76BFE5CF2247059C00DC0409 /* Resources */,
+				76BFE5D12247059C00DC0409 /* FoosballServiceTest.swift */,
+				76BFE5D22247059C00DC0409 /* Info.plist */,
+			);
+			path = KickerAppTests;
+			sourceTree = "<group>";
+		};
+		76BFE5CF2247059C00DC0409 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76BFE5D02247059C00DC0409 /* FoosballTable.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		76C7687621F0935E004C29B6 /* data */ = {
 			isa = PBXGroup;
 			children = (
 				76F2D20D21EE42DE0049333F /* Users.swift */,
 				7651128E21EFAA9000E30564 /* FoosballTableCodable.swift */,
+				76BFE5BB2246DAB900DC0409 /* UserManager.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -145,7 +203,7 @@
 		76F2D1EA21EE42A40049333F = {
 			isa = PBXGroup;
 			children = (
-				76F2D20F21EE44DF0049333F /* Alamofire.framework */,
+				76BFE5CD2247059C00DC0409 /* KickerAppTests */,
 				76F2D1F521EE42A40049333F /* KickerApp */,
 				76F2D1F421EE42A40049333F /* Products */,
 				02CEFAA1AE73D4854F1CE545 /* Pods */,
@@ -157,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				76F2D1F321EE42A40049333F /* KickerApp.app */,
+				76F804142221EA4800623E1F /* KickerAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +223,8 @@
 		76F2D1F521EE42A40049333F /* KickerApp */ = {
 			isa = PBXGroup;
 			children = (
+				768F2FC12246599E00AB88E3 /* Assets.xcassets */,
+				76F8040A22217E8C00623E1F /* ViewModels */,
 				76682892221736E100368F8E /* Coordinator */,
 				7668288F221736E100368F8E /* Service */,
 				76F5290021F1E59700A1724E /* VCs */,
@@ -173,7 +234,6 @@
 				76F2D21421EF3B780049333F /* fonts */,
 				76F2D1F621EE42A40049333F /* AppDelegate.swift */,
 				76F2D1FA21EE42A40049333F /* Main.storyboard */,
-				76F2D20021EE42A50049333F /* Assets.xcassets */,
 				76F2D20521EE42A50049333F /* Info.plist */,
 				76F2D1FD21EE42A40049333F /* KickerApp.xcdatamodeld */,
 			);
@@ -187,6 +247,8 @@
 				76CF324321EF6A1A00FE11F3 /* Raleway-Bold.ttf */,
 				76CF324021EF6A1A00FE11F3 /* Raleway-ExtraLight.ttf */,
 				76CF324221EF6A1A00FE11F3 /* Raleway-Medium.ttf */,
+				76BFE5C02247018900DC0409 /* Gilroy-ExtraBold.ttf */,
+				76BFE5BF2247018900DC0409 /* Gilroy-Light.ttf */,
 				76F2D21521EF3B780049333F /* Montserrat-Medium.ttf */,
 				76F2D21621EF3B780049333F /* Montserrat-Light.ttf */,
 				76F2D21721EF3B780049333F /* Montserrat-Bold.ttf */,
@@ -198,6 +260,8 @@
 		76F528FF21F1E59200A1724E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				764FE4AF22344ED2001733E5 /* CustomBarItem.swift */,
+				764FE4AE22344ED2001733E5 /* CustomBarItem.xib */,
 				76C7687921F1374F004C29B6 /* CustomListTableViewCell.swift */,
 				76C7687A21F1374F004C29B6 /* CustomListTableViewCell.xib */,
 				76CF324821EF6EC800FE11F3 /* FoosballCollectionViewCell.swift */,
@@ -208,16 +272,26 @@
 		76F5290021F1E59700A1724E /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				7651129021EFAE0A00E30564 /* StatisticViewController.swift */,
 				7651095221F9AF4D00EADDE3 /* LaunchScreenViewController.swift */,
 				76F2D22221EF48EF0049333F /* FoosballViewController.swift */,
 				76F2D1F821EE42A40049333F /* ListViewController.swift */,
 				76CDA3C321FB7A6400594BF0 /* CustomSideMenuViewController.swift */,
-				76CDA3C921FBB0E100594BF0 /* ContainViewController.swift */,
+				76CDA3C921FBB0E100594BF0 /* ContainerViewController.swift */,
 				76CB3BEF21FE0C3900832B9B /* GradientView.swift */,
 				7668289922182A5200368F8E /* ContainerNavigationController.swift */,
 			);
 			path = VCs;
+			sourceTree = "<group>";
+		};
+		76F8040A22217E8C00623E1F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				76F8040B22217EC100623E1F /* FoosballTableViewModel.swift */,
+				764FE4AC22344768001733E5 /* CustomBarItemViewModel.swift */,
+				764FE4B2223460C0001733E5 /* ContainerViewModel.swift */,
+				76BFE5B92246AD6300DC0409 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7D46B8C04A4E82EED2CD1C81 /* Frameworks */ = {
@@ -240,6 +314,7 @@
 				76F2D1F021EE42A40049333F /* Frameworks */,
 				76F2D1F121EE42A40049333F /* Resources */,
 				76F2D21221EE44DF0049333F /* Embed Frameworks */,
+				213728696ED0E26F7E4C6B1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +324,24 @@
 			productName = KickerApp;
 			productReference = 76F2D1F321EE42A40049333F /* KickerApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		76F804132221EA4800623E1F /* KickerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76F8041B2221EA4800623E1F /* Build configuration list for PBXNativeTarget "KickerAppTests" */;
+			buildPhases = (
+				76F804102221EA4800623E1F /* Sources */,
+				76F804112221EA4800623E1F /* Frameworks */,
+				76F804122221EA4800623E1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76F8041A2221EA4800623E1F /* PBXTargetDependency */,
+			);
+			name = KickerAppTests;
+			productName = KickerAppTests;
+			productReference = 76F804142221EA4800623E1F /* KickerAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -262,6 +355,10 @@
 				TargetAttributes = {
 					76F2D1F221EE42A40049333F = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					76F804132221EA4800623E1F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 76F2D1F221EE42A40049333F;
 					};
 				};
 			};
@@ -279,6 +376,7 @@
 			projectRoot = "";
 			targets = (
 				76F2D1F221EE42A40049333F /* KickerApp */,
+				76F804132221EA4800623E1F /* KickerAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,22 +387,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F2D21B21EF3B780049333F /* Montserrat-Light.ttf in Resources */,
+				764FE4B022344ED2001733E5 /* CustomBarItem.xib in Resources */,
 				76F2D21D21EF3B780049333F /* Montserrat-Black.ttf in Resources */,
 				76C7687C21F1374F004C29B6 /* CustomListTableViewCell.xib in Resources */,
 				76CF324421EF6A1A00FE11F3 /* Raleway-ExtraLight.ttf in Resources */,
+				76BFE5C2224702C700DC0409 /* Gilroy-Light.ttf in Resources */,
 				76CF324521EF6A1A00FE11F3 /* Raleway-Black.ttf in Resources */,
+				76BFE5C1224702C300DC0409 /* Gilroy-ExtraBold.ttf in Resources */,
 				76F2D21C21EF3B780049333F /* Montserrat-Bold.ttf in Resources */,
 				76CF324721EF6A1A00FE11F3 /* Raleway-Bold.ttf in Resources */,
-				76F2D20121EE42A50049333F /* Assets.xcassets in Resources */,
 				76CF324621EF6A1A00FE11F3 /* Raleway-Medium.ttf in Resources */,
 				76F2D21A21EF3B780049333F /* Montserrat-Medium.ttf in Resources */,
+				768F2FC22246599E00AB88E3 /* Assets.xcassets in Resources */,
 				76F2D1FC21EE42A40049333F /* Main.storyboard in Resources */,
+				76BFE5D42247059C00DC0409 /* FoosballTable.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76F804122221EA4800623E1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		213728696ED0E26F7E4C6B1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KickerApp/Pods-KickerApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KickerApp/Pods-KickerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		60D87868D85032D3C4CA4415 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,22 +472,44 @@
 				76F2D21921EF3B780049333F /* Design.swift in Sources */,
 				76682896221736E100368F8E /* FoosballService.swift in Sources */,
 				7651095321F9AF4D00EADDE3 /* LaunchScreenViewController.swift in Sources */,
+				764FE4B122344ED2001733E5 /* CustomBarItem.swift in Sources */,
+				764FE4AD22344768001733E5 /* CustomBarItemViewModel.swift in Sources */,
 				76682897221736E100368F8E /* ViewControllerCoordinator.swift in Sources */,
 				7651128F21EFAA9000E30564 /* FoosballTableCodable.swift in Sources */,
 				76CB3BF021FE0C3900832B9B /* GradientView.swift in Sources */,
 				76F2D22321EF48EF0049333F /* FoosballViewController.swift in Sources */,
 				76CDA3C421FB7A6400594BF0 /* CustomSideMenuViewController.swift in Sources */,
+				76BFE5BA2246AD6300DC0409 /* ListViewModel.swift in Sources */,
+				764FE4B3223460C0001733E5 /* ContainerViewModel.swift in Sources */,
 				76682895221736E100368F8E /* UserService.swift in Sources */,
 				76C7687B21F1374F004C29B6 /* CustomListTableViewCell.swift in Sources */,
+				76BFE5BC2246DAB900DC0409 /* UserManager.swift in Sources */,
 				7668289A22182A5200368F8E /* ContainerNavigationController.swift in Sources */,
 				76F2D1F721EE42A40049333F /* AppDelegate.swift in Sources */,
-				76CDA3CA21FBB0E100594BF0 /* ContainViewController.swift in Sources */,
-				7651129121EFAE0A00E30564 /* StatisticViewController.swift in Sources */,
+				76CDA3CA21FBB0E100594BF0 /* ContainerViewController.swift in Sources */,
+				76F8040C22217EC100623E1F /* FoosballTableViewModel.swift in Sources */,
 				76F2D1FF21EE42A40049333F /* KickerApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		76F804102221EA4800623E1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76BFE5D7224705C800DC0409 /* KickerAppTests.swift in Sources */,
+				76BFE5D8224705CE00DC0409 /* FoosballServiceTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76F8041A2221EA4800623E1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76F2D1F221EE42A40049333F /* KickerApp */;
+			targetProxy = 76F804192221EA4800623E1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		76F2D1FA21EE42A40049333F /* Main.storyboard */ = {
@@ -536,6 +689,44 @@
 			};
 			name = Release;
 		};
+		76F8041C2221EA4800623E1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KickerAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.KickerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KickerApp.app/KickerApp";
+			};
+			name = Debug;
+		};
+		76F8041D2221EA4800623E1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KickerAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.KickerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KickerApp.app/KickerApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +744,15 @@
 			buildConfigurations = (
 				76F2D20921EE42A50049333F /* Debug */,
 				76F2D20A21EE42A50049333F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76F8041B2221EA4800623E1F /* Build configuration list for PBXNativeTarget "KickerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76F8041C2221EA4800623E1F /* Debug */,
+				76F8041D2221EA4800623E1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
