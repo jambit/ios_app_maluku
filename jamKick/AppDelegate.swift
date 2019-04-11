@@ -40,10 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setUpHockeyApp() {
-        MSAppCenter.start("4ad74573-964b-456c-a647-a88c01f1dd89", withServices: [
+        MSAppCenter.start("415e797a-3e48-42c2-9df0-a5c12656f1de", withServices:[
             MSAnalytics.self,
             MSCrashes.self
-        ])
+            ])
     }
 
     private func setUpNavigationBar() {

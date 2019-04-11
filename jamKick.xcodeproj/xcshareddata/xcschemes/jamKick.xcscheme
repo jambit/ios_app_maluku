@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76F2D1F221EE42A40049333F"
-               BuildableName = "KickerApp.app"
-               BlueprintName = "KickerApp"
-               ReferencedContainer = "container:KickerApp.xcodeproj">
+               BuildableName = "jamKick.app"
+               BlueprintName = "jamKick"
+               ReferencedContainer = "container:jamKick.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "76F804132221EA4800623E1F"
-               BuildableName = "KickerAppTests.xctest"
-               BlueprintName = "KickerAppTests"
-               ReferencedContainer = "container:KickerApp.xcodeproj">
+               BuildableName = "jamKickTests.xctest"
+               BlueprintName = "jamKickTests"
+               ReferencedContainer = "container:jamKick.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76F2D1F221EE42A40049333F"
-            BuildableName = "KickerApp.app"
-            BlueprintName = "KickerApp"
-            ReferencedContainer = "container:KickerApp.xcodeproj">
+            BuildableName = "jamKick.app"
+            BlueprintName = "jamKick"
+            ReferencedContainer = "container:jamKick.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76F2D1F221EE42A40049333F"
-            BuildableName = "KickerApp.app"
-            BlueprintName = "KickerApp"
-            ReferencedContainer = "container:KickerApp.xcodeproj">
+            BuildableName = "jamKick.app"
+            BlueprintName = "jamKick"
+            ReferencedContainer = "container:jamKick.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "76F2D1F221EE42A40049333F"
-            BuildableName = "KickerApp.app"
-            BlueprintName = "KickerApp"
-            ReferencedContainer = "container:KickerApp.xcodeproj">
+            BuildableName = "jamKick.app"
+            BlueprintName = "jamKick"
+            ReferencedContainer = "container:jamKick.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

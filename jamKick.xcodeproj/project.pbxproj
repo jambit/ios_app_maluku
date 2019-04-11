@@ -24,7 +24,7 @@
 		76BFE5C1224702C300DC0409 /* Gilroy-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BFE5C02247018900DC0409 /* Gilroy-ExtraBold.ttf */; };
 		76BFE5C2224702C700DC0409 /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76BFE5BF2247018900DC0409 /* Gilroy-Light.ttf */; };
 		76BFE5D42247059C00DC0409 /* FoosballTable.json in Resources */ = {isa = PBXBuildFile; fileRef = 76BFE5D02247059C00DC0409 /* FoosballTable.json */; };
-		76BFE5D7224705C800DC0409 /* KickerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BFE5CE2247059C00DC0409 /* KickerAppTests.swift */; };
+		76BFE5D7224705C800DC0409 /* jamKick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BFE5CE2247059C00DC0409 /* jamKick.swift */; };
 		76BFE5D8224705CE00DC0409 /* FoosballServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BFE5D12247059C00DC0409 /* FoosballServiceTest.swift */; };
 		76C7687B21F1374F004C29B6 /* CustomListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7687921F1374F004C29B6 /* CustomListTableViewCell.swift */; };
 		76C7687C21F1374F004C29B6 /* CustomListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C7687A21F1374F004C29B6 /* CustomListTableViewCell.xib */; };
@@ -92,7 +92,7 @@
 		76BFE5BB2246DAB900DC0409 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		76BFE5BF2247018900DC0409 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
 		76BFE5C02247018900DC0409 /* Gilroy-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.ttf"; sourceTree = "<group>"; };
-		76BFE5CE2247059C00DC0409 /* KickerAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KickerAppTests.swift; sourceTree = "<group>"; };
+		76BFE5CE2247059C00DC0409 /* jamKick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jamKick.swift; sourceTree = "<group>"; };
 		76BFE5D02247059C00DC0409 /* FoosballTable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoosballTable.json; sourceTree = "<group>"; };
 		76BFE5D12247059C00DC0409 /* FoosballServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoosballServiceTest.swift; sourceTree = "<group>"; };
 		76BFE5D22247059C00DC0409 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		76CF324221EF6A1A00FE11F3 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
 		76CF324321EF6A1A00FE11F3 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		76CF324821EF6EC800FE11F3 /* FoosballCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoosballCollectionViewCell.swift; sourceTree = "<group>"; };
-		76F2D1F321EE42A40049333F /* KickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76F2D1F321EE42A40049333F /* jamKick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jamKick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F2D1F621EE42A40049333F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F2D1F821EE42A40049333F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		76F2D1FB21EE42A40049333F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,9 +118,9 @@
 		76F2D21621EF3B780049333F /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		76F2D21721EF3B780049333F /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		76F2D21821EF3B780049333F /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
-		76F2D22221EF48EF0049333F /* FoosballViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoosballViewController.swift; path = KickerApp/VCs/FoosballViewController.swift; sourceTree = SOURCE_ROOT; };
+		76F2D22221EF48EF0049333F /* FoosballViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoosballViewController.swift; path = jamKick/VCs/FoosballViewController.swift; sourceTree = SOURCE_ROOT; };
 		76F8040B22217EC100623E1F /* FoosballTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoosballTableViewModel.swift; sourceTree = "<group>"; };
-		76F804142221EA4800623E1F /* KickerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76F804142221EA4800623E1F /* jamKickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jamKickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DD87EB8927E2304910FCA8 /* Pods-KickerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KickerApp/Pods-KickerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0EC56CCCFD76AE079721806 /* Pods-KickerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KickerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-KickerApp/Pods-KickerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,15 +171,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		76BFE5CD2247059C00DC0409 /* KickerAppTests */ = {
+		76BFE5CD2247059C00DC0409 /* jamKickTests */ = {
 			isa = PBXGroup;
 			children = (
-				76BFE5CE2247059C00DC0409 /* KickerAppTests.swift */,
+				76BFE5CE2247059C00DC0409 /* jamKick.swift */,
 				76BFE5CF2247059C00DC0409 /* Resources */,
 				76BFE5D12247059C00DC0409 /* FoosballServiceTest.swift */,
 				76BFE5D22247059C00DC0409 /* Info.plist */,
 			);
-			path = KickerAppTests;
+			path = jamKickTests;
 			sourceTree = "<group>";
 		};
 		76BFE5CF2247059C00DC0409 /* Resources */ = {
@@ -203,8 +203,8 @@
 		76F2D1EA21EE42A40049333F = {
 			isa = PBXGroup;
 			children = (
-				76BFE5CD2247059C00DC0409 /* KickerAppTests */,
-				76F2D1F521EE42A40049333F /* KickerApp */,
+				76BFE5CD2247059C00DC0409 /* jamKickTests */,
+				76F2D1F521EE42A40049333F /* jamKick */,
 				76F2D1F421EE42A40049333F /* Products */,
 				02CEFAA1AE73D4854F1CE545 /* Pods */,
 				7D46B8C04A4E82EED2CD1C81 /* Frameworks */,
@@ -214,13 +214,13 @@
 		76F2D1F421EE42A40049333F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76F2D1F321EE42A40049333F /* KickerApp.app */,
-				76F804142221EA4800623E1F /* KickerAppTests.xctest */,
+				76F2D1F321EE42A40049333F /* jamKick.app */,
+				76F804142221EA4800623E1F /* jamKickTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76F2D1F521EE42A40049333F /* KickerApp */ = {
+		76F2D1F521EE42A40049333F /* jamKick */ = {
 			isa = PBXGroup;
 			children = (
 				768F2FC12246599E00AB88E3 /* Assets.xcassets */,
@@ -237,7 +237,7 @@
 				76F2D20521EE42A50049333F /* Info.plist */,
 				76F2D1FD21EE42A40049333F /* KickerApp.xcdatamodeld */,
 			);
-			path = KickerApp;
+			path = jamKick;
 			sourceTree = "<group>";
 		};
 		76F2D21421EF3B780049333F /* fonts */ = {
@@ -305,9 +305,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		76F2D1F221EE42A40049333F /* KickerApp */ = {
+		76F2D1F221EE42A40049333F /* jamKick */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76F2D20821EE42A50049333F /* Build configuration list for PBXNativeTarget "KickerApp" */;
+			buildConfigurationList = 76F2D20821EE42A50049333F /* Build configuration list for PBXNativeTarget "jamKick" */;
 			buildPhases = (
 				60D87868D85032D3C4CA4415 /* [CP] Check Pods Manifest.lock */,
 				76F2D1EF21EE42A40049333F /* Sources */,
@@ -320,14 +320,14 @@
 			);
 			dependencies = (
 			);
-			name = KickerApp;
+			name = jamKick;
 			productName = KickerApp;
-			productReference = 76F2D1F321EE42A40049333F /* KickerApp.app */;
+			productReference = 76F2D1F321EE42A40049333F /* jamKick.app */;
 			productType = "com.apple.product-type.application";
 		};
-		76F804132221EA4800623E1F /* KickerAppTests */ = {
+		76F804132221EA4800623E1F /* jamKickTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76F8041B2221EA4800623E1F /* Build configuration list for PBXNativeTarget "KickerAppTests" */;
+			buildConfigurationList = 76F8041B2221EA4800623E1F /* Build configuration list for PBXNativeTarget "jamKickTests" */;
 			buildPhases = (
 				76F804102221EA4800623E1F /* Sources */,
 				76F804112221EA4800623E1F /* Frameworks */,
@@ -338,9 +338,9 @@
 			dependencies = (
 				76F8041A2221EA4800623E1F /* PBXTargetDependency */,
 			);
-			name = KickerAppTests;
+			name = jamKickTests;
 			productName = KickerAppTests;
-			productReference = 76F804142221EA4800623E1F /* KickerAppTests.xctest */;
+			productReference = 76F804142221EA4800623E1F /* jamKickTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -362,7 +362,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 76F2D1EE21EE42A40049333F /* Build configuration list for PBXProject "KickerApp" */;
+			buildConfigurationList = 76F2D1EE21EE42A40049333F /* Build configuration list for PBXProject "jamKick" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -375,8 +375,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76F2D1F221EE42A40049333F /* KickerApp */,
-				76F804132221EA4800623E1F /* KickerAppTests */,
+				76F2D1F221EE42A40049333F /* jamKick */,
+				76F804132221EA4800623E1F /* jamKickTests */,
 			);
 		};
 /* End PBXProject section */
@@ -496,7 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76BFE5D7224705C800DC0409 /* KickerAppTests.swift in Sources */,
+				76BFE5D7224705C800DC0409 /* jamKick.swift in Sources */,
 				76BFE5D8224705CE00DC0409 /* FoosballServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,7 +506,7 @@
 /* Begin PBXTargetDependency section */
 		76F8041A2221EA4800623E1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 76F2D1F221EE42A40049333F /* KickerApp */;
+			target = 76F2D1F221EE42A40049333F /* jamKick */;
 			targetProxy = 76F804192221EA4800623E1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -651,12 +651,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = KickerApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/jamKick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jambit.KickerApp2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jambit.jamKick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_REFLECTION_METADATA_LEVEL = all;
 				SWIFT_VERSION = 4.2;
@@ -676,12 +676,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = KickerApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/jamKick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jambit.KickerApp2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jambit.jamKick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_REFLECTION_METADATA_LEVEL = all;
 				SWIFT_VERSION = 4.2;
@@ -704,7 +704,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KickerApp.app/KickerApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jamKick.app/jamKick";
 			};
 			name = Debug;
 		};
@@ -723,14 +723,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KickerApp.app/KickerApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jamKick.app/jamKick";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		76F2D1EE21EE42A40049333F /* Build configuration list for PBXProject "KickerApp" */ = {
+		76F2D1EE21EE42A40049333F /* Build configuration list for PBXProject "jamKick" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76F2D20621EE42A50049333F /* Debug */,
@@ -739,7 +739,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76F2D20821EE42A50049333F /* Build configuration list for PBXNativeTarget "KickerApp" */ = {
+		76F2D20821EE42A50049333F /* Build configuration list for PBXNativeTarget "jamKick" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76F2D20921EE42A50049333F /* Debug */,
@@ -748,7 +748,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76F8041B2221EA4800623E1F /* Build configuration list for PBXNativeTarget "KickerAppTests" */ = {
+		76F8041B2221EA4800623E1F /* Build configuration list for PBXNativeTarget "jamKickTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76F8041C2221EA4800623E1F /* Debug */,

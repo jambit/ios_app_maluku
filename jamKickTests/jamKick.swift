@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import KickerApp
+@testable import jamKick
 
 class KickerAppTests: XCTestCase {
 
